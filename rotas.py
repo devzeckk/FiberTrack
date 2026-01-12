@@ -13,7 +13,7 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 driver.maximize_window() 
 
-# 1. URL OFICIAL (A que você estava usando pode estar redirecionando errado)
+# 1. URL do Google maps
 print("--- Abrindo Google Maps...")
 driver.get("https://www.google.com/maps")
 
@@ -38,7 +38,7 @@ def adiciona_destino(endereco):
     # Chama a função para limpar a tela antes de buscar
     lidar_com_cookies()
     
-    wait = WebDriverWait(driver, 20) # Aumentei para 20s
+    wait = WebDriverWait(driver, 20) 
     
     try:
         # Tenta encontrar pelo ID padrão
@@ -80,7 +80,7 @@ def abre_rotas():
 
 if __name__ == '__main__':
     try:
-        endereco = 'Av. José Bonifácio, 245 - Farroupilha, Porto Alegre - RS, 90040-130'
+        endereco = 'Av. Dr. João da Silva Lima, 1-133 - Arari, MA, 65480-000'
         
         adiciona_destino(endereco)
         
@@ -97,4 +97,5 @@ if __name__ == '__main__':
         traceback.print_exc()
         # Tira um print da tela para você ver o que o robô estava vendo na hora do erro
         driver.save_screenshot("erro_debug.png")
+
         print("Uma foto da tela (erro_debug.png) foi salva na pasta do projeto.")
