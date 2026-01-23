@@ -45,7 +45,7 @@ def realizar_automacao(lista_os):
     driver.get("https://www.google.com.br/maps/dir/")
     sleep(3)
     
-    # Preenchimento automático (sua lógica já validada)
+    # Preenchimento automático
     campo_0 = driver.find_element(By.XPATH, "//div[@id='directions-searchbox-0']//input")
     campo_0.send_keys(ESCRITORIO)
     campo_0.send_keys(Keys.ENTER)
@@ -75,5 +75,5 @@ def executar():
     return "Erro: Lista vazia."
 
 if __name__ == '__main__':
-    # host='0.0.0.0' permite que outros PCs da empresa acessem pelo seu IP
+    # host
     app.run(host='0.0.0.0', port=5000, debug=True)

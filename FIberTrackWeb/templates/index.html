@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FiberTrack | Logística</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding-top: 50px; }
+        .box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 400px; }
+        h2 { color: #1a73e8; margin-top: 0; }
+        textarea { width: 100%; border-radius: 8px; border: 1px solid #ddd; padding: 10px; box-sizing: border-box; }
+        button { background: #1a73e8; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; margin-top: 15px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #1557b0; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>FiberTrack</h2>
+        <p>Cole as OS (uma por linha):</p>
+        <form action="/executar" method="post">
+            <textarea name="lista_os" rows="10" placeholder="Ex: Rua das Flores, 10"></textarea>
+            <button type="submit">GERAR ROTA OTIMIZADA</button>
+        </form>
+    </div>
+</body>
+</html>
